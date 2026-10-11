@@ -1,0 +1,98 @@
+
+name: "Bug Report"
+description: "Report a bug or crash in a Minecraft mod by P1es3n."
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue!
+        Please provide as much information as possible.
+
+  - type: dropdown
+    id: mod
+    attributes:
+      label: "Mod"
+      description: "Which mod are you reporting an issue with?"
+      options:
+        - "IMPRINT UNSPOKEN"
+        - "Luxury Building Pack"
+        - "Mini Creeper"
+        - "Crystal Depths - Geodes"
+        - "HuntCore"
+    validations:
+      required: true
+
+  - type: input
+    id: minecraft-version
+    attributes:
+      label: "Minecraft Version"
+      placeholder: "e.g. 26.3"
+    validations:
+      required: true
+
+  - type: input
+    id: mod-version
+    attributes:
+      label: "Mod Version"
+      placeholder: "e.g. 1.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: loader
+    attributes:
+      label: "Mod Loader"
+      options:
+        - "Fabric"
+        - "NeoForge"
+        - "Forge"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Bug Description"
+      description: "Describe what went wrong."
+      placeholder: "Explain the issue in detail."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: "Steps to Reproduce"
+      description: "How can this issue be reproduced?"
+      placeholder: |
+        1. Launch Minecraft
+        2. Enter a world
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Expected Behavior"
+      description: "What did you expect to happen?"
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs and Screenshots"
+      description: "Attach your latest.log, crash report, or screenshots. Remove any personal information before uploading."
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: "Additional Information"
+      description: "List other installed mods or anything else that might help."
+    validations:
+      required: false
